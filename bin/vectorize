@@ -1,0 +1,16 @@
+#!/bin/bash
+# by @kinduff from post https://gist.github.com/lelandbatey/8677901
+autotrace \
+  --dpi 1024 \
+  --line-threshold 0.1 \
+  --color-count 16 \
+  --corner-always-threshold 60 \
+  --line-reversion-threshold 0.1 \
+  --width-weight-factor 0.1 \
+  --despeckle-level 10 \
+  --despeckle-tightness 5 \
+  --preserve-width \
+  --remove-adjacent-corners \
+  --output-format svg \
+  --output-file $2 \
+  $1

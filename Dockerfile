@@ -1,8 +1,8 @@
 FROM ubuntu:latest
 
-RUN apt-get upgrade && apt-get update && apt-get install -fqy python-software-properties
-
-RUN apt-get install -fqy git curl
+RUN apt-get upgrade && apt-get update && apt-get install -fqy \
+    python-software-properties software-properties-common \
+    git curl
 
 # Install java
 ADD install-java.sh /tmp/install-java.sh

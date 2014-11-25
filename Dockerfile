@@ -55,7 +55,7 @@ RUN \
   && make && make install \
   && rm -rf /tmp/autotrace-0.31.1 /tmp/autotrace-0.31.1.tar.gz
 
-RUN apt-get update && apt-get upgrade
+RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -qfy python-setuptools python-dev
 RUN easy_install blockdiag seqdiag actdiag nwdiag
 
